@@ -8,17 +8,18 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CollectionManagementApplication implements CommandLineRunner {// DB te data insert na kore direct code diye insert korar jonno
+//public class CollectionManagementApplication implements CommandLineRunner {// DB te data insert na kore direct code diye insert korar jonno
+public class CollectionManagementApplication{// DB te data insert na kore direct code diye insert korar jonno
 
 	public static void main(String[] args) {
 		SpringApplication.run(CollectionManagementApplication.class, args);
 	}
 
-	@Autowired
-	private StudentRepository studentRepository;
+//	@Autowired
+//	private StudentRepository studentRepository;
 
-	@Override
-	public void run(String... args) throws Exception {
+//	@Override
+//	public void run(String... args) throws Exception {
 //		Student student1 = new Student("Md Tanvir", "Hossain", "tus@gmail.com");
 //		studentRepository.save(student1);
 //
@@ -30,5 +31,5 @@ public class CollectionManagementApplication implements CommandLineRunner {// DB
 
 //		Student student4 = new Student("Jisan", "Khan", "jisan@gmail.com");
 //		studentRepository.save(student4);
-	}
+//	}
 }
