@@ -27,5 +27,8 @@ public class CollectionManagementApplication implements CommandLineRunner {// DB
 //
 //		Student student3 = new Student("John", "Cena", "john@gmail.com");
 //		studentRepository.save(student3);
+
+//		Student student4 = new Student("Jisan", "Khan", "jisan@gmail.com");
+//		studentRepository.save(student4);
 	}
 }
