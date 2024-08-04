@@ -13,8 +13,8 @@
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet"/>
 
-    <link href="../../static/css/navbar.css" rel="stylesheet"/>
-
+<!--    <link href="../../static/css/navbar.css" rel="stylesheet"/>-->
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
 </head>
 <body>
     <div th:replace="~{fragments/navbar :: navbar}"></div>
