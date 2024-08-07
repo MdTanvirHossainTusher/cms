@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" th:href="@{/css/navbar.css}">
+
+</head>
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+<!--    <h1>This is registration page</h1>-->
+
+<section class="h-100 gradient-custom-2">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center">
+      <div class="col col-lg-9 col-xl-8">
+        <div class="card">
+          <div class="rounded-top text-white d-flex flex-row" style="background-color: #000; height:200px;">
+            <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                   alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+                   style="width: 150px; z-index: 1">
+<!--              <button  type="button" th:href="@{/profile/{profile_id}/edit(id=${user.id})}"-->
+              <button  type="button" th:href="@{/profile/edit/1}"
+                        class="btn btn-outline-dark text-body" data-mdb-modal-init data-mdb-target="#exampleModal"
+                       data-mdb-button-init data-mdb-ripple-init data-mdb-ripple-color="dark" style="z-index: 1;">
+                Edit profile
+              </button>
+            </div>
+            <div class="ms-3" style="margin-top: 130px;">
+              <h5>Name</h5>
+              <p>Email</p>
+            </div>
+          </div>
+          <br><br><br><br>
+<!--          <div class="p-4 text-black bg-body-tertiary">-->
+<!--            <div class="d-flex justify-content-end text-center py-1 text-body">-->
+<!--              <div>-->
+<!--                <p class="mb-1 h5">253</p>-->
+<!--                <p class="small text-muted mb-0">Photos</p>-->
+<!--              </div>-->
+<!--              <div class="px-3">-->
+<!--                <p class="mb-1 h5">1026</p>-->
+<!--                <p class="small text-muted mb-0">Followers</p>-->
+<!--              </div>-->
+<!--              <div>-->
+<!--                <p class="mb-1 h5">478</p>-->
+<!--                <p class="small text-muted mb-0">Following</p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+          <div class="card-body p-4 text-black">
+<!--            <div class="mb-5  text-body">-->
+<!--              <p class="lead fw-normal mb-1">About</p>-->
+<!--              <div class="p-4 bg-body-tertiary">-->
+<!--                <p class="font-italic mb-1">Web Developer</p>-->
+<!--                <p class="font-italic mb-1">Lives in New York</p>-->
+<!--                <p class="font-italic mb-0">Photographer</p>-->
+<!--              </div>-->
+<!--            </div>-->
+            <div class="d-flex justify-content-between align-items-center mb-4 text-body">
+              <p class="lead fw-normal mb-0">My Collections</p>
+              <p class="mb-0"><a href="#!" class="text-muted justify-content-md-end">Show all</a></p>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md">
+              <button class="btn btn-primary me-md-2 mb-3" type="button">Add New Collection</button>
+            </div>
+
+
+            <div class="row g-2">
+
+<!--              <div class="col mb-2">-->
+<!--                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp" alt="image 1"-->
+<!--                     class="w-100 rounded-3">-->
+<!--              </div>-->
+<!--              <div class="col mb-2">-->
+<!--                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp" alt="image 1"-->
+<!--                     class="w-100 rounded-3">-->
+<!--              </div>-->
+
+              <div class="col">
+                <div class="card h-100">
+                  <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Collection title</h5>
+                    <p class="card-text">collection type</p>
+                    <p class="card-text">item quantity in this collection</p>
+                    <p class="card-text">Created by {user}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100">
+                  <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Collection title</h5>
+                    <p class="card-text">collection type</p>
+                    <p class="card-text">item quantity in this collection</p>
+                    <p class="card-text">Created by {user}</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<!-- MDB -->
+<script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"
+></script>
+
+
+</body>
+</html>
